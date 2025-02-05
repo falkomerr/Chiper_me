@@ -47,7 +47,7 @@ const MeshComponent = () => {
 
       // Accumulate rotations
       targetRotation.y += deltaX * sensitivity;
-      targetRotation.x += (deltaY * sensitivity) / 30; // Add X-axis rotation
+      targetRotation.x += (deltaY * sensitivity) / 80; // Add X-axis rotation
     }
 
     let targetRotation = { x: 0, y: 0 }; // Track both X and Y rotations
