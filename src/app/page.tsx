@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { Contacts } from '@/components/Contacts';
 import { Model } from '@/components/model';
 import { SecondScreen } from '@/app/second-screen';
+import { ShootingStars } from '@/components/stars';
+import { StarsBackground } from '@/components/stars-bg';
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
 const FirstScreen = () => {
   return (
     <div className="radial-[at_50%_65%] flex h-screen w-screen max-w-full items-center justify-center overflow-hidden bg-[#060507] from-[#602A9A] to-black to-90%">
+      <ShootingStars />
+      <StarsBackground />
       <Model />
 
       <div className="z-50 flex h-full w-full flex-col items-center bg-black/40 py-4 py-[3.75rem]">
