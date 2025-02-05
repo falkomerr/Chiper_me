@@ -14,7 +14,7 @@ export const SecondScreen = () => {
         <div className="absolute h-full w-full rounded-lg bg-black">
           <Image
             className="z-0 h-full max-h-[32.5rem] w-full object-cover"
-            src="https://s.iimg.su/s/05/OE7VE2ljJKHAMdgXpbWg5gpHDIe3siSqJXknuBys.png"
+            src="/background-secondary.svg"
             width={1920}
             quality={100}
             height={1080}
