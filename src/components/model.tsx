@@ -34,7 +34,7 @@ const MeshComponent = () => {
   useEffect(() => {
     let lastMouseX = 0;
     let lastMouseY = 0;
-    const sensitivity = 0.003;
+    const sensitivity = 0.0001;
     const smoothingFactor = 0.07;
 
     function handleMouse(event: MouseEvent) {
@@ -47,7 +47,7 @@ const MeshComponent = () => {
 
       // Accumulate rotations
       targetRotation.y += deltaX * sensitivity;
-      targetRotation.x += (deltaY * sensitivity) / 80; // Add X-axis rotation
+      targetRotation.x += (deltaY * sensitivity) / 6; // Add X-axis rotation
     }
 
     let targetRotation = { x: 0, y: 0 }; // Track both X and Y rotations

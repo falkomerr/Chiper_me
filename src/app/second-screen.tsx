@@ -6,6 +6,7 @@ import { ReactNode } from 'react';
 import { cn, ibmPlexSerif } from '@/lib/utils';
 import { Contacts } from '@/components/Contacts';
 import Link from 'next/link';
+import { TextGenerateEffect } from '@/components/TextGenerateEffect';
 
 export const SecondScreen = () => {
   return (
@@ -22,15 +23,11 @@ export const SecondScreen = () => {
           />
         </div>
 
-        <p className="relative z-[999] mx-auto mb-[3.4375rem] max-w-[55.125rem] py-[3.5rem] text-center text-[3rem] leading-[3rem] whitespace-break-spaces text-white">
-          Decrypt t<Decore>h</Decore>e code. U<Decore>n</Decore>lock the pr
-          <Decore>i</Decore>vate key. Fa<Decore>i</Decore>l, and it’s over. No
-          retr<Decore>i</Decore>es. Ch<Decore>i</Decore>per_me is t
-          <Decore>h</Decore>e Sq<Decore>u</Decore>id Game of cry
-          <Decore>p</Decore>
-          to — only t<Decore>h</Decore>e stron<Decore>g</Decore>est surv
-          <Decore>i</Decore>ve
-        </p>
+        <TextGenerateEffect
+          words="Decrypt the code. Unlock the private key. Fail, and it’s over. No
+          retries. Chiper_me is t he Squid Game of cry p to — only the strongest
+          survive"
+        />
         <div className="relative z-[999] mx-auto mb-4 flex max-w-[60.5rem] flex-nowrap gap-4 overflow-hidden px-4 text-white">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -90,8 +87,8 @@ export const SecondScreen = () => {
               />
             </div>
             <p className="mt-full absolute z-50 max-w-[17.6875rem] whitespace-break-spaces">
-              Decoding Blockchain Dark Secrets Blockchain isn’t just about
-              transactions. Decrypt the challenge, help break the barriers.
+              It’s about solving the hidden challenges that keep it from being
+              fully scalable, secure, and user-friendly.
             </p>
             <div className="absolute bottom-0 left-0 h-full w-full bg-gradient-to-t from-[#361764] to-[#03010600] to-[50%] backdrop-opacity-40" />
           </motion.div>
@@ -110,8 +107,8 @@ export const SecondScreen = () => {
               />
             </div>
             <p className="whitespace-break-spaces">
-              Decrypt to Unlock the Future. Blockchain faces massive issues with
-              scalability, security, and speed.
+              We're forcing the industry to evolve by solving these problems
+              with every puzzle cracked.
             </p>
           </motion.div>
         </div>

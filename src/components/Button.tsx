@@ -10,7 +10,7 @@ export const Button = (
       className={cn(
         'cursor-pointer bg-white transition duration-200 hover:bg-[#CCA1E0]',
         icon
-          ? 'flex size-[1.5rem] items-center justify-center rounded-full'
+          ? 'flex size-[2rem] items-center justify-center rounded-full'
           : 'rounded-[0.5rem]',
         className,
       )}
