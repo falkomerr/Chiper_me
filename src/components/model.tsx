@@ -33,18 +33,24 @@ const MeshComponent = () => {
 
   useEffect(() => {
     let lastMouseX = 0;
-    let targetRotation = 0;
+    let lastMouseY = 0; // Track vertical mouse movement
     const sensitivity = 0.002;
     const smoothingFactor = 0.05;
 
     function handleMouse(event: MouseEvent) {
-      // Calculate relative mouse movement
+      // Calculate relative mouse movements
       const deltaX = event.clientX - lastMouseX;
-      lastMouseX = event.clientX;
+      const deltaY = event.clientY - lastMouseY;
 
-      // Accumulate rotation
-      targetRotation += deltaX * sensitivity;
+      lastMouseX = event.clientX;
+      lastMouseY = event.clientY;
+
+      // Accumulate rotations
+      targetRotation.x += deltaY * sensitivity;
+      targetRotation.y += deltaX * sensitivity;
     }
+
+    let targetRotation = { x: 0, y: 0 }; // Track both rotations
 
     document.addEventListener('mousemove', handleMouse);
 
@@ -52,10 +58,15 @@ const MeshComponent = () => {
     const animate = () => {
       if (!mesh.current) return;
 
-      // Smoothly interpolate towards target rotation
+      // // Smoothly interpolate towards target rotation
+      // mesh.current.rotation.x = MathUtils.lerp(
+      //   mesh.current.rotation.x,
+      //   targetRotation.x,
+      //   smoothingFactor,
+      // );
       mesh.current.rotation.y = MathUtils.lerp(
         mesh.current.rotation.y,
-        targetRotation,
+        targetRotation.y,
         smoothingFactor,
       );
 
@@ -70,7 +81,7 @@ const MeshComponent = () => {
   }, []);
 
   return (
-    <mesh scale={[4, 4, 4]} position={[0, -3.5, 2]} ref={mesh}>
+    <mesh scale={[4, 4, 4]} position={[0, -4, 3]} ref={mesh}>
       <primitive object={gltf.scene} />
     </mesh>
   );

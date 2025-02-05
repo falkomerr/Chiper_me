@@ -55,7 +55,6 @@ const FirstScreen = () => {
         fill
         className="z-40 backdrop-opacity-60"
       />
-      <div className="absolute bottom-0 h-40 w-full bg-gradient-to-t from-black to-transparent"></div>
     </div>
   );
 };
