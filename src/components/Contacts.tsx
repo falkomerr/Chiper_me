@@ -4,7 +4,7 @@ import Link from 'next/link';
 const contacts = [
   {
     id: 1,
-    link: 'https://t.me/falkomerr',
+    link: 'https://t.me/chiper_me',
     icon: (
       <svg
         width="12"
@@ -22,7 +22,7 @@ const contacts = [
   },
   {
     id: 2,
-    link: 'https://t.me/falkomerr',
+    link: 'https://x.com/chiper_me',
     icon: (
       <svg
         width="12"

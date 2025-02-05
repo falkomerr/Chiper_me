@@ -17,7 +17,7 @@ export const Model = () => {
       </Canvas>
       <Image
         src="/background.svg"
-        className="absolute right-1/2 bottom-1/2 left-1/2 z-20 -translate-x-1/2 translate-y-[85%] scale-[1.7]"
+        className="absolute right-1/2 bottom-1/2 left-1/2 z-20 -translate-x-1/2 translate-y-[87%] scale-[1.75]"
         alt="bg"
         height="700"
         width="700"
@@ -33,20 +33,24 @@ const MeshComponent = () => {
 
   useEffect(() => {
     let lastMouseX = 0;
-    const sensitivity = 0.002;
-    const smoothingFactor = 0.05;
+    let lastMouseY = 0;
+    const sensitivity = 0.003;
+    const smoothingFactor = 0.07;
 
     function handleMouse(event: MouseEvent) {
       // Calculate relative mouse movements
       const deltaX = event.clientX - lastMouseX;
+      const deltaY = event.clientY - lastMouseY;
 
       lastMouseX = event.clientX;
+      lastMouseY = event.clientY;
 
       // Accumulate rotations
       targetRotation.y += deltaX * sensitivity;
+      targetRotation.x += (deltaY * sensitivity) / 30; // Add X-axis rotation
     }
 
-    let targetRotation = { y: 0 }; // Track both rotations
+    let targetRotation = { x: 0, y: 0 }; // Track both X and Y rotations
 
     document.addEventListener('mousemove', handleMouse);
 
@@ -56,6 +60,12 @@ const MeshComponent = () => {
       mesh.current.rotation.y = MathUtils.lerp(
         mesh.current.rotation.y,
         targetRotation.y,
+        smoothingFactor,
+      );
+
+      mesh.current.rotation.x = MathUtils.lerp(
+        mesh.current.rotation.x,
+        targetRotation.x,
         smoothingFactor,
       );
 

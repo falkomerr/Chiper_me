@@ -8,7 +8,7 @@ export const Button = (
   return (
     <button
       className={cn(
-        'bg-white',
+        'cursor-pointer bg-white transition duration-200 hover:bg-[#CCA1E0]',
         icon
           ? 'flex size-[1.5rem] items-center justify-center rounded-full'
           : 'rounded-[0.5rem]',

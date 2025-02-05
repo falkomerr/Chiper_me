@@ -21,6 +21,13 @@ const FirstScreen = () => {
       <ShootingStars />
       <StarsBackground />
       <Model />
+      <Image
+        src="/glow.svg"
+        className="absolute right-1/2 left-1/2 z-[10] mt-60 w-screen -translate-x-1/2"
+        alt="subtract"
+        height="1200"
+        width="1200"
+      />
 
       <div className="z-50 flex h-full w-full flex-col items-center bg-black/40 py-4 py-[3.75rem]">
         <Contacts />
@@ -35,7 +42,7 @@ const FirstScreen = () => {
         </Link>
 
         <div className="z-[60] flex flex-col items-center gap-y-6">
-          <p className="flex w-fit cursor-pointer items-center justify-center gap-x-2 rounded-full bg-black px-[0.875rem] py-3 text-[#9855FF]">
+          <p className="flex w-fit cursor-pointer items-center justify-center gap-x-2 rounded-full border border-[#262626] bg-black px-[0.875rem] py-3 text-[#9855FF]">
             <span className="flex w-fit items-center justify-center rounded-full bg-[#9855FF] px-1 py-0.5 text-xs font-semibold text-[#000000]">
               NEW
             </span>
