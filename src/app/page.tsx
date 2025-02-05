@@ -15,7 +15,7 @@ export default function Home() {
 
 const FirstScreen = () => {
   return (
-    <div className="flex h-screen w-screen max-w-full items-center justify-center bg-radial-[at_50%_65%] from-[#602A9A] to-black to-90%">
+    <div className="radial-[at_50%_65%] flex h-screen w-screen max-w-full items-center justify-center overflow-hidden bg-[#060507] from-[#602A9A] to-black to-90%">
       <Model />
 
       <div className="z-50 flex h-full w-full flex-col items-center bg-black/40 py-4 py-[3.75rem]">
@@ -37,12 +37,11 @@ const FirstScreen = () => {
             </span>
             CA: SOON
           </p>
-          <p className="bg-gradient-to-b from-white from-60% to-[#B372CF] bg-clip-text text-center text-[4.5rem] leading-18 font-medium text-transparent">
+          <p className="bg-gradient-to-b from-white from-60% to-[#B372CF] bg-clip-text text-center text-[5.5rem] leading-22 font-medium tracking-tighter text-transparent">
             Chiper_me: <br /> The Blockchain Gauntlet
           </p>
-          <p className="text-center text-[1.75rem] font-light text-white">
-            Elevate your site’s visibility effortlessly with AI, where <br />{' '}
-            smart technology meets user-friendly SEO tools.
+          <p className="max-w-[28rem] text-center text-[1.75rem] font-light text-white">
+            Decrypt the unknown. Solve the impossible. Unlock what’s hidden
           </p>
           <button className="animate-shimmer inline-flex h-14 cursor-pointer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-8 text-xl font-medium text-white transition-colors focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 focus:outline-none">
             Go Quiz
@@ -53,7 +52,7 @@ const FirstScreen = () => {
         src="/subtract-transparent.svg"
         alt="bg"
         fill
-        className="z-40 backdrop-opacity-60"
+        className="z-40 mt-52"
       />
     </div>
   );
