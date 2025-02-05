@@ -17,7 +17,7 @@ export const Model = () => {
       </Canvas>
       <Image
         src="/background.svg"
-        className="absolute right-1/2 bottom-1/2 left-1/2 z-20 -translate-x-1/2 translate-y-[87%] scale-[1.75]"
+        className="absolute right-1/2 bottom-1/2 left-1/2 z-20 -translate-x-1/2 translate-y-[95%] scale-[2.2]"
         alt="bg"
         height="700"
         width="700"
