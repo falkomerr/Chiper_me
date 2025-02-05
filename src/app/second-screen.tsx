@@ -37,7 +37,7 @@ export const SecondScreen = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
-            className="w-full max-w-[22.875rem] gap-y-4 rounded-xl border border-[#262626] bg-black p-4">
+            className="w-full max-w-[18.875rem] gap-y-4 rounded-xl border border-[#262626] bg-black p-4">
             <div>
               <Image
                 src="https://s3-alpha-sig.figma.com/img/24a9/f01d/3971cc35568397685ee5c97315aec88f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JMZ7YrXqQ9fYHV3LVIdF9KtCvjMVC8h02bFiRYQg63JjlkMKT5YK05BV6lg7ELiMyDcYmsy0iJJahvlyK19bF7R-dCmXoulAxKxtwweFpSPIZGgTDddfRIAxturw18vvOiwxI6Qq40m6Vw2gXj92aUMFNKIiZN01bFnaxXBREfcZYXcxdkEMshoxycArHkr~nyoJW97Jc6w6LWcoexq3Ts-vy2mmOhACFD0f1aWs3WGmC4jGdqRUwDj9Lu5Lx2pKQh6vkIPhOePjstAOEArb~y9YMosE-UksNjDY6EWwfG8-BJmLJxPbtAz2iDQVKBwgaIkHkMiTLwjCwd6xWYAo7w__"
@@ -100,10 +100,10 @@ export const SecondScreen = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.5 }}
             viewport={{ once: true }}
-            className="w-full max-w-[22.875rem] gap-y-4 rounded-xl border border-[#262626] bg-black p-4">
+            className="w-full max-w-[18.875rem] gap-y-4 rounded-xl border border-[#262626] bg-black p-4">
             <div>
               <Image
-                src="https://s3-alpha-sig.figma.com/img/24a9/f01d/3971cc35568397685ee5c97315aec88f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=JMZ7YrXqQ9fYHV3LVIdF9KtCvjMVC8h02bFiRYQg63JjlkMKT5YK05BV6lg7ELiMyDcYmsy0iJJahvlyK19bF7R-dCmXoulAxKxtwweFpSPIZGgTDddfRIAxturw18vvOiwxI6Qq40m6Vw2gXj92aUMFNKIiZN01bFnaxXBREfcZYXcxdkEMshoxycArHkr~nyoJW97Jc6w6LWcoexq3Ts-vy2mmOhACFD0f1aWs3WGmC4jGdqRUwDj9Lu5Lx2pKQh6vkIPhOePjstAOEArb~y9YMosE-UksNjDY6EWwfG8-BJmLJxPbtAz2iDQVKBwgaIkHkMiTLwjCwd6xWYAo7w__"
+                src="https://s3-alpha-sig.figma.com/img/295d/6d3d/5c83aa5d4622b0189a7d97a1343e5d11?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Zth9rMI-Qobl-84TFSkq-RH466KGL7WICVLrCFk3x2XnqB0I6zS3ng6gp54pXwNnyastue-JMQS8ebcnx7EXzbh7lvPIW0QyBShiVhWQQv7q4u5nJ-1q0DIE9nrAgbQac014R4IhX~frMiqJSb6YSR1mHuIXgSaGf1NEAz0daTHCScoS-4RtEKpfhsMeDYy0jLBKEpCauh1CKFZPloRWomRgo6RcuBEAlWQt0Z~TTYH6A0WfJDt8UmvasfCjCe66Jds228hS2roxEbp7V5rhZUsAejCY-1WGOn2rgO~Sp6fGsnvDAaD3ANqBxUmPPVTvGQ7gNwAv2MaE-sQ5KxvZzQ__"
                 alt="ring"
                 width={237}
                 height={251}
