@@ -26,7 +26,7 @@ export const SecondScreen = () => {
           retries. Chiper_me is the Squid Game of crypto — only the strongest
           survive"
         />
-        <div className="relative z-[999] mx-auto mb-4 flex max-w-[60.5rem] flex-nowrap gap-4 overflow-hidden px-4 text-white">
+        <div className="relative z-50 mx-auto mb-4 flex max-w-[60.5rem] flex-nowrap gap-4 overflow-hidden px-4 text-white">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export const SecondScreen = () => {
             <div className="absolute bottom-0 left-0 h-full w-full bg-gradient-to-t from-[#361764] to-[#03010600] to-[50%] backdrop-opacity-40" />
           </motion.div>
         </div>
-        <div className="relative z-[999] mx-auto flex max-w-[60.5rem] flex-nowrap gap-4 overflow-hidden px-4 text-white">
+        <div className="relative z-50 mx-auto flex max-w-[60.5rem] flex-nowrap gap-4 overflow-hidden px-4 text-white">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}

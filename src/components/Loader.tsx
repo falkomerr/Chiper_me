@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { animate } from 'framer-motion';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 export function Loader() {
   const [visible, setVisible] = useState(true);
@@ -25,10 +26,12 @@ export function Loader() {
     return () => controls.stop();
   }, []);
 
-  if (!visible) return null;
-
   return (
-    <div className="fixed top-0 z-[9999] flex h-screen w-screen items-center justify-center overflow-hidden">
+    <div
+      className={cn(
+        'fixed top-0 z-[9999] flex h-screen w-screen items-center justify-center overflow-hidden opacity-100 transition-all duration-400',
+        !visible && '-z-10 opacity-0',
+      )}>
       <p className="relative z-[99999] text-7xl text-white" ref={nodeRef} />
 
       <div className="absolute top-0 h-full w-full rounded-xl bg-black">
