@@ -5,7 +5,7 @@ import { Button } from './Button';
 import { Heart } from 'lucide-react';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { cn } from '@/lib/utils';
+import { cn, pixelifySans } from '@/lib/utils';
 
 const data = [
   {
@@ -17,7 +17,7 @@ const data = [
       '3. Buried in encrypted capsules somewhere on the Moon 🌑',
       '4. Tucked inside Ethereum smart contracts',
     ],
-    rightAnswer: 1,
+    rightAnswer: 2,
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const data = [
       '3. Buy now, regret later — that’s the play, fam',
       '4. Degen mode on — YOLO all in and pray for the pump 🔥',
     ],
-    rightAnswer: 3,
+    rightAnswer: 1,
   },
   {
     id: 4,
@@ -156,9 +156,13 @@ export function QuizDialog({ trigger }: { trigger: ReactNode }) {
             </div>
           </>
         ) : (
-          <div className="mx-auto mt-8 flex h-[23.875rem] w-[55.4375rem] flex-col items-center gap-y-12">
-            <p className="w-full text-center text-[6rem] leading-[4.5rem]">
-              GAME OVER :(
+          <div className="mx-auto mt-8 flex h-[50.875rem] w-[55.4375rem] flex-col items-center gap-y-12">
+            <p
+              className={cn(
+                'w-full text-center text-[10rem] leading-[8rem]',
+                pixelifySans.className,
+              )}>
+              GAME <br /> OVER :(
             </p>
             <Button
               onClick={() => {

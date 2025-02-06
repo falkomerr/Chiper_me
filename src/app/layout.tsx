@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import Cursor from '@/components/Cursor';
+import { ShootingStars } from '@/components/stars';
+import { StarsBackground } from '@/components/stars-bg';
+import { Loader } from '@/components/Loader';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,7 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} `}>{children}</body>
+      <body className={`${inter.className} `}>
+        <Cursor />
+        <ShootingStars minDelay={100} maxDelay={200} />
+        <StarsBackground />
+        <Loader />
+        {children}
+      </body>
     </html>
   );
 }
