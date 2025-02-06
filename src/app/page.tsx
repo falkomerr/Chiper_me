@@ -5,6 +5,7 @@ import { Model } from '@/components/model';
 import { SecondScreen } from '@/app/second-screen';
 import { ShootingStars } from '@/components/stars';
 import { StarsBackground } from '@/components/stars-bg';
+import { QuizDialog } from '@/components/QuizDialog';
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
 const FirstScreen = () => {
   return (
     <div className="radial-[at_50%_65%] flex h-screen w-screen max-w-full items-center justify-center overflow-hidden bg-[#060507] from-[#602A9A] to-black to-90%">
-      <ShootingStars />
+      <ShootingStars minDelay={200} maxDelay={1800} />
       <StarsBackground />
       <Model />
       <Image
@@ -31,7 +32,7 @@ const FirstScreen = () => {
 
       <div className="z-50 flex h-full w-full flex-col items-center bg-black/40 py-4 py-[3.75rem]">
         <Contacts />
-        <Link href="/" className="z-[60]">
+        <Link href="/" className="z-[60] mr-2">
           <Image
             src="/subtract.svg"
             className="z-[60] mb-[5.125rem]"
@@ -54,9 +55,13 @@ const FirstScreen = () => {
           <p className="max-w-[28rem] text-center text-[1.75rem] font-light text-white">
             Decrypt the unknown. Solve the impossible. Unlock what’s hidden
           </p>
-          <button className="animate-shimmer inline-flex h-14 cursor-pointer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-8 text-xl font-medium text-white transition-colors focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 focus:outline-none">
-            Go Quiz
-          </button>
+          <QuizDialog
+            trigger={
+              <button className="animate-shimmer inline-flex h-14 cursor-pointer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-8 text-xl font-medium text-white transition-colors focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 focus:outline-none">
+                Go Quiz
+              </button>
+            }
+          />
         </div>
       </div>
       <Image

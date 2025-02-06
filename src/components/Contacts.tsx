@@ -1,4 +1,4 @@
-import { Button } from '@/components/Button';
+import { CustomButton } from '@/components/CustomButton';
 import Link from 'next/link';
 
 const contacts = [
@@ -48,7 +48,7 @@ export const Contacts = () => {
           href={contact.link}
           className="z-[9999] cursor-pointer"
           key={contact.id}>
-          <Button icon>{contact.icon}</Button>
+          <CustomButton icon>{contact.icon}</CustomButton>
         </Link>
       ))}
     </div>

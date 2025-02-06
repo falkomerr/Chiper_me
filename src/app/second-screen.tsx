@@ -2,8 +2,6 @@
 
 import Image from 'next/image';
 import { motion } from 'motion/react';
-import { ReactNode } from 'react';
-import { cn, ibmPlexSerif } from '@/lib/utils';
 import { Contacts } from '@/components/Contacts';
 import Link from 'next/link';
 import { TextGenerateEffect } from '@/components/TextGenerateEffect';
@@ -25,7 +23,7 @@ export const SecondScreen = () => {
 
         <TextGenerateEffect
           words="Decrypt the code. Unlock the private key. Fail, and it’s over. No
-          retries. Chiper_me is t he Squid Game of cry p to — only the strongest
+          retries. Chiper_me is the Squid Game of crypto — only the strongest
           survive"
         />
         <div className="relative z-[999] mx-auto mb-4 flex max-w-[60.5rem] flex-nowrap gap-4 overflow-hidden px-4 text-white">
@@ -116,7 +114,7 @@ export const SecondScreen = () => {
 
       <div className="mx-auto mt-[8rem] flex w-fit flex-col items-center">
         <Contacts />
-        <Link href="/" className="z-[60]">
+        <Link href="/" className="z-[60] mr-3">
           <Image
             src="/subtract.svg"
             className="z-[60] mb-[5.125rem]"
@@ -127,16 +125,5 @@ export const SecondScreen = () => {
         </Link>
       </div>
     </div>
-  );
-};
-const Decore = ({ children }: { children: ReactNode }) => {
-  return (
-    <span
-      className={cn(
-        'text-[3rem] leading-[3rem] text-white italic',
-        ibmPlexSerif.className,
-      )}>
-      {children}
-    </span>
   );
 };

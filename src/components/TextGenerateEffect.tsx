@@ -1,6 +1,6 @@
 'use client';
-import { useEffect } from 'react';
-import { motion, stagger, useAnimate } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { motion, stagger, useAnimate, useInView } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 export const TextGenerateEffect = ({
@@ -16,8 +16,11 @@ export const TextGenerateEffect = ({
 }) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(' ');
+  const ref = useRef<HTMLDivElement | null>(null);
+  const inView = useInView(ref);
 
   useEffect(() => {
+    if (!inView) return;
     animate(
       'span',
       {
@@ -38,7 +41,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="relative z-[999] mx-auto mb-[3.4375rem] max-w-[55.125rem] py-[3.5rem] text-center text-[3rem] leading-[3rem] font-normal whitespace-break-spaces text-white"
+              className="relative z-50 mx-auto mb-[3.4375rem] max-w-[55.125rem] py-[3.5rem] text-center text-[3rem] leading-[3rem] font-normal whitespace-break-spaces text-white"
               style={{
                 filter: filter ? 'blur(10px)' : 'none',
               }}>
@@ -51,7 +54,7 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={cn('font-bold', className)}>
+    <div ref={ref} className={cn('font-bold', className)}>
       <div className="mt-4">
         <div className="relative z-[999] mx-auto mb-[3.4375rem] max-w-[55.125rem] py-[3.5rem] text-center text-[3rem] leading-[3rem] whitespace-break-spaces text-white">
           {renderWords()}

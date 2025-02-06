@@ -1,0 +1,22 @@
+<svg width="553" height="347" viewBox="0 0 553 347" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_120_153" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="-1" width="573" height="349">
+        <rect y="-0.970001" width="572.334" height="348.858" rx="7.37543" fill="#D9D9D9"/>
+    </mask>
+    <g mask="url(#mask0_120_153)">
+        <g filter="url(#filter0_f_120_153)">
+            <ellipse cx="294.949" cy="-23.5572" rx="166.045" ry="229.376" fill="#8C45FF" fill-opacity="0.49"/>
+        </g>
+        <rect y="-0.970001" width="572.334" height="348.858" fill="url(#paint0_linear_120_153)"/>
+    </g>
+    <defs>
+        <filter id="filter0_f_120_153" x="-95.3091" y="-477.146" width="780.517" height="907.178" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="112.107" result="effect1_foregroundBlur_120_153"/>
+        </filter>
+        <linearGradient id="paint0_linear_120_153" x1="286.429" y1="53.2394" x2="285.909" y2="347.888" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#020103" stop-opacity="0"/>
+            <stop offset="1" stop-color="#020103"/>
+        </linearGradient>
+    </defs>
+</svg>
