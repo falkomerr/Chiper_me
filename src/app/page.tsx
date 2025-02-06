@@ -19,7 +19,7 @@ export default function Home() {
 const FirstScreen = () => {
   return (
     <div className="radial-[at_50%_65%] flex h-screen w-screen max-w-full items-center justify-center overflow-hidden bg-[#060507] from-[#602A9A] to-black to-90%">
-      <ShootingStars minDelay={200} maxDelay={300} />
+      <ShootingStars minDelay={100} maxDelay={200} />
       <StarsBackground />
       <Model />
       <Image
