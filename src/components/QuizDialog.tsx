@@ -89,7 +89,7 @@ export function QuizDialog({ trigger }: { trigger: ReactNode }) {
       <DialogTrigger asChild className="h-14">
         {trigger}
       </DialogTrigger>
-      <DialogContent className="z-[9999] !w-fit max-w-fit border-none bg-[#2D1B69] p-8 text-white">
+      <DialogContent className="z-[9999] !w-[55vw] border-none bg-[#2D1B69] p-8 text-white">
         <div className="z-[9999] mb-8 flex gap-2">
           {Array.from({ length: hearts }).map((_, index) => (
             <Heart
