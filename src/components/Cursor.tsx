@@ -107,11 +107,13 @@ function Cursor({
   const onMouseEnter = useCallback(() => setIsVisible(true), []);
   const onMouseLeave = useCallback(() => setIsVisible(false), []);
 
-  useEventListener('mousemove', onMouseMove, document);
-  useEventListener('mousedown', onMouseDown, document);
-  useEventListener('mouseup', onMouseUp, document);
-  useEventListener('mouseenter', onMouseEnter, document);
-  useEventListener('mouseleave', onMouseLeave, document);
+  useEffect(() => {
+    useEventListener('mousemove', onMouseMove, document);
+    useEventListener('mousedown', onMouseDown, document);
+    useEventListener('mouseup', onMouseUp, document);
+    useEventListener('mouseenter', onMouseEnter, document);
+    useEventListener('mouseleave', onMouseLeave, document);
+  });
 
   useEffect(() => {
     if (isActive) {

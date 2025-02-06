@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Cursor from '@/components/Cursor';
 import { ShootingStars } from '@/components/stars';
 import { StarsBackground } from '@/components/stars-bg';
 import { Loader } from '@/components/Loader';
+import Cursor from '@/components/Cursor';
 
 const inter = Inter({
   subsets: ['latin'],
