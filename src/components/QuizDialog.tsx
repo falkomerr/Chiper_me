@@ -69,7 +69,6 @@ export function QuizDialog({ trigger }: { trigger: ReactNode }) {
       setHearts((prev) => prev - 1);
       timeoutRef.current = setTimeout(
         () => {
-          setLevel((prev) => prev + 1);
           setAnswer({
             number: -1,
             correct: true,
@@ -89,7 +88,11 @@ export function QuizDialog({ trigger }: { trigger: ReactNode }) {
       <DialogTrigger asChild className="h-14">
         {trigger}
       </DialogTrigger>
-      <DialogContent className="z-[9999] !w-[55vw] border-none bg-[#2D1B69] p-8 text-white">
+      <DialogContent
+        className={cn(
+          'z-[9999] h-[75vh] !w-[55vw] border-none bg-[#2D1B69] p-8 text-white',
+          loose && 'items-center justify-center pt-20',
+        )}>
         <div className="z-[9999] mb-8 flex gap-2">
           {Array.from({ length: hearts }).map((_, index) => (
             <Heart
@@ -153,9 +156,9 @@ export function QuizDialog({ trigger }: { trigger: ReactNode }) {
             </div>
           </>
         ) : (
-          <div className="mt-8 flex h-[23.875rem] w-[55.4375rem] flex-col gap-y-12">
+          <div className="mx-auto mt-8 flex h-[23.875rem] w-[55.4375rem] flex-col items-center gap-y-12">
             <p className="w-full text-center text-[6rem] leading-[4.5rem]">
-              GAME OVER:(
+              GAME OVER :(
             </p>
             <Button
               onClick={() => {
