@@ -12,11 +12,7 @@ import {
 // Типы для хука useEventListener
 type EventListener = (event: Event) => void;
 
-function useEventListener(
-  eventName: string,
-  handler: EventListener,
-  element: HTMLElement | Window | Document = document,
-) {
+function useEventListener(eventName: string, handler: EventListener) {
   const savedHandler = useRef<EventListener | null>(null);
 
   useEffect(() => {
@@ -24,17 +20,17 @@ function useEventListener(
   }, [handler]);
 
   useEffect(() => {
-    const isSupported = element && element.addEventListener;
+    const isSupported = document && document.addEventListener;
     if (!isSupported) return;
 
     const eventListener = (event: Event) => savedHandler.current?.(event);
 
-    element.addEventListener(eventName, eventListener);
+    document.addEventListener(eventName, eventListener);
 
     return () => {
-      element.removeEventListener(eventName, eventListener);
+      document.removeEventListener(eventName, eventListener);
     };
-  }, [eventName, element]);
+  }, [eventName]);
 }
 
 // Пропсы для компонента Cursor
@@ -107,13 +103,11 @@ function Cursor({
   const onMouseEnter = useCallback(() => setIsVisible(true), []);
   const onMouseLeave = useCallback(() => setIsVisible(false), []);
 
-  useEffect(() => {
-    useEventListener('mousemove', onMouseMove, document);
-    useEventListener('mousedown', onMouseDown, document);
-    useEventListener('mouseup', onMouseUp, document);
-    useEventListener('mouseenter', onMouseEnter, document);
-    useEventListener('mouseleave', onMouseLeave, document);
-  });
+  useEventListener('mousemove', onMouseMove);
+  useEventListener('mousedown', onMouseDown);
+  useEventListener('mouseup', onMouseUp);
+  useEventListener('mouseenter', onMouseEnter);
+  useEventListener('mouseleave', onMouseLeave);
 
   useEffect(() => {
     if (isActive) {
@@ -216,10 +210,10 @@ function Cursor({
   };
 
   return (
-    <Fragment>
+    <>
       <div ref={cursorOuterRef} style={styles.cursorOuter} />
       <div ref={cursorInnerRef} style={styles.cursorInner} />
-    </Fragment>
+    </>
   );
 }
 
