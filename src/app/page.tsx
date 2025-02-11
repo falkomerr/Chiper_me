@@ -44,7 +44,7 @@ const FirstScreen = () => {
             <span className="flex w-fit items-center justify-center rounded-full bg-[#9855FF] px-1 py-0.5 text-xs font-semibold text-[#000000]">
               NEW
             </span>
-            CA: S00N
+            CA: 9YrHLdsbW4c6D27SLGH5hLmzT4JkfQdm5sYEVr6Npump
           </p>
           <p className="bg-gradient-to-b from-white from-60% to-[#B372CF] bg-clip-text text-center text-[5.5rem] leading-22 font-medium tracking-tighter text-transparent">
             Chiper_me: <br /> The Blockchain Gauntlet
